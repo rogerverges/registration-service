@@ -22,12 +22,12 @@ pipeline {
    
         stage('Build go') {
         	steps {
-            	sh 'go build post.go'
+            	sh 'go build post.go '
         	}
     	}
     	stage('docker build image'){
     	    steps{
-    	        sh 'docker build -t post.go .'
+    	        sh 'docker build -t post .'
     	    }
     	}
     }
