@@ -86,6 +86,7 @@ func insertar(c cars, w http.ResponseWriter) (e error) {
 	_, err = sentenciaPreparada.Exec(ID, c.Brand, c.Model, c.HorsePower)
 	c.ID = ID;
 	json.NewEncoder(w).Encode(c)
+	json.NewEncoder(w).Encode(c)
 	if err != nil {
 		return err
 	}
