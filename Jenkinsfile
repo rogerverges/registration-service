@@ -28,6 +28,8 @@ pipeline {
     	stage('docker build image'){
     	    steps{
     	        sh 'docker build -t post .'
+				sh 'docker tag post 192.162.133.158:5000/post:latest'
+				sh 'docker push 192.162.133.158:5000/post:latest'
     	    }
     	}
     }
