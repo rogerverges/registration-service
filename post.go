@@ -77,7 +77,7 @@ func insertar(c cars, w http.ResponseWriter) (e error) {
 	defer db.Close()
 	var ID = rand.Intn(10000)
 	// Preparamos para prevenir inyecciones SQL
-	sentenciaPreparada, err := db.Prepare("INSERT INTO coche (ID, Brand_victoria2, Model, HorsePower) VALUES(?, ?, ?, ?)")
+	sentenciaPreparada, err := db.Prepare("INSERT INTO coche (ID, Brand_victoria, Model, HorsePower) VALUES(?, ?, ?, ?)")
 	if err != nil {
 		return err
 	}
