@@ -23,7 +23,7 @@ func main() {
 	direccion := ":8080"
 	fmt.Println("Servidor listo escuchando en " + direccion)
 	log.Fatal(http.ListenAndServe(direccion, nil))
-	fmt.Println("hola7")
+	fmt.Println("hola9")
 }
 
 func postCars(w http.ResponseWriter, r *http.Request) {
